@@ -57,12 +57,15 @@ div.nav-ref-3 a {
 .food-name {
     font-family: fantasy;
     font-size: 1rem;
-    color: var(--color-of-text1);
+    color: var(--color-of-background-alt);
     margin-bottom: 5px;
     text-align: center;
     font-weight: bold;
     text-transform:capitalize;
     width: 100%;
+    background-color: var(--color-of-highlight);
+    padding: 4px 6px;
+    border-radius: 5px;
 }
 
 .food-card img {
@@ -75,8 +78,7 @@ div.nav-ref-3 a {
 }
 
 .food-card:hover {
-        box-shadow: 0 7px 15px rgba(0, 0, 0, 0.6);
-        background-color: var(--color-of-text1);
+        background-color: var(--color-of-background-alt);
 }
 
 .food-description {
