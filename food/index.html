@@ -90,14 +90,13 @@
     $(".food-card").click(function(){
         const name = $(this).data("name");
         const desc = $(this).data("desc");
-        const taste = parseInt($(this).data("taste"));       // misal data-taste="90"
-        const spice = parseInt($(this).data("spice"));       // misal data-spice="30"
-        const sweet = parseInt($(this).data("sweet"));       // misal data-sweet="70"
+        const taste = parseInt($(this).data("taste"));       
+        const spice = parseInt($(this).data("spice"));       
+        const sweet = parseInt($(this).data("sweet"));      
 
         $("#food-name").text(name);
         $("#food-desc").text(desc);
 
-        // animasi stats bar
         $("#taste-bar").css("width", taste + "%");
         $("#spice-bar").css("width", spice + "%");
         $("#sweet-bar").css("width", sweet + "%");
