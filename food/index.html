@@ -1,1 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamal's Dashboard</title>
+    <link rel="stylesheet" href="../CSS/reseter.css">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/food.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-main">
+                <div class="div-nav">
+                <nav class="header-nav">
+                    <ul>
+                        <li>
+                        <div class="home"><a href="../index.html">Home</a></div>
+                        <div class="nav-ref-1"><a href="../profile/index.html">Profile</a></div>
+                        <div class="nav-ref-2"><a href="../hometown/index.html">Hometown</a></div>
+                        <div class="nav-ref-3"><a class="scroller">Food</a></div>
+                        <div class="nav-ref-4"><a href="../tourist/index.html">Tourist</a></div>
+                        </li>
+                    </ul>
+                </nav>
+                </div>
+        </div>
+    </header>
+
+    <main>
+    <section class="food-selector">
+    <h2>My Favorite Foods</h2>
+    <div class="food-grid">
+        <div class="food-card" data-name="Garang asem" data-desc="The undisputed GOAT in my list, no need to describe." data-taste="100" data-spice="70" data-sweet="20">
+            <span class="food-name">Garang asem</span>
+            <img src="../IMGS/garang-asem-bandeng-asam-pedas-foto-resep-utama.jpg" alt="garang-asem">
+        </div>
+        <div class="food-card" data-name="Lapis daging" data-desc="Bitter take, but this thing will maul Rendang." data-taste="95" data-spice="50" data-sweet="40">
+            <span class="food-name">Lapis daging</span>
+            <img src="../IMGS/lapis-daging-sapi-foto-resep-utama.jpg" alt="lapis-daging">
+        </div>
+        <div class="food-card" data-name="Steak" data-desc="The only western food in the list. Reason was simple, who doesn't cooked beef?" data-taste="95" data-spice="20" data-sweet="30">
+            <span class="food-name">Steak</span>
+            <img src="../IMGS/istockphoto-1371751060-612x612.jpg" alt="Steak">
+        </div>
+        </div>
+    </section>
+
+
+
+    <section class="food-description">
+    <div class="food-desc-container">
+        <div class="food-text">
+            <div class="food-text">
+                <p id="food-desc">Select food to describe</p>
+            </div>
+            <p id="food-desc"></p>
+        </div>
+        <div class="food-stats stats">
+            <p>Taste:</p>
+            <div class="stats-bar1">
+                <div id="taste-bar" class="stats-bar-filler"></div>
+            </div>
+            <p>Spiciness:</p>
+            <div class="stats-bar1">
+                <div id="spice-bar" class="stats-bar-filler"></div>
+            </div>
+            <p>Sweetness:</p>
+            <div class="stats-bar1">
+                <div id="sweet-bar" class="stats-bar-filler"></div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+
+
+    <script>
+  $(document).ready(function(){
+    $(".scroller").click(function(e){
+      e.preventDefault();
+      $("html, body").animate({ scrollTop: 0 }, "slow"); 
+    });
+  });
+
+  $(document).ready(function(){
+    $(".food-card").click(function(){
+        const name = $(this).data("name");
+        const desc = $(this).data("desc");
+        const taste = parseInt($(this).data("taste"));       // misal data-taste="90"
+        const spice = parseInt($(this).data("spice"));       // misal data-spice="30"
+        const sweet = parseInt($(this).data("sweet"));       // misal data-sweet="70"
+
+        $("#food-name").text(name);
+        $("#food-desc").text(desc);
+
+        // animasi stats bar
+        $("#taste-bar").css("width", taste + "%");
+        $("#spice-bar").css("width", spice + "%");
+        $("#sweet-bar").css("width", sweet + "%");
+
+        $('html, body').animate({
+            scrollTop: $(".food-description").offset().top - 50
+        }, 500);
+        });
+    });
+
+
+    </script>
+
+</body>
+</html>
 
