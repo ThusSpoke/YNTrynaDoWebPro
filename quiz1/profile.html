@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamal's Dashboard</title>
+    <link rel="stylesheet" href="../CSS/reseter.css">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/profile.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-main">
+                <div class="div-nav">
+                <nav class="header-nav">
+                    <ul>
+                        <li>
+                        <div class="home"><a href="../TrueHome.html">Home</a></div>
+                        <div class="nav-ref-1"><a class="scroller">Profile</a></div>
+                        <div class="nav-ref-2"><a href="../quiz1/hometown.html">Hometown</a></div>
+                        <div class="nav-ref-3"><a href="../quiz1/food.html">Food</a></div>
+                        <div class="nav-ref-4"><a href="../quiz1/touris.html">Touris</a></div>
+                        </li>
+                    </ul>
+                </nav>
+                </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="greetings-section">
+            <h2 class="greetings-section-welcome">Hi,<br></h2>
+            <span class="greetings-section-im">I'm</span>
+            <span class="greetings-section-frontname">Kamal</span>
+            <span class="greetings-section-backname">Zaky</span>
+            <span class="greetings-section-lastname">Adinata</span>
+        </section>
+
+        <section class="profile-section">
+            <div class="profile-photo">
+                <img src="../IMGS/WhatsApp Image 2025-09-25 at 15.02.00_646e63bf.jpg" alt="my-gambar" class="my-gambar">
+            </div>
+            <div class="profile-description">
+                <h2 class="profile-description-aboutme">A little description about me.</h2>
+                <p class="profile-description-description">I am an active student pursuing a degree in Informatics Engineering at Institut Teknologi Sepuluh Nopember with a
+competitive spirit and the ability to collaborate. I thrive in collaborative environments and enjoy fostering a positive,
+productive atmosphere. With adaptable and innovative thinking, I tackle complex problems efficiently. Eager to grow as a
+leader, I aim to bring unique perspectives and make a meaningful impact.</p>
+                <span><a href="https://www.instagram.com/kamalzaky_/" class="profile-description-instagram-link" target="_blank">My Instagram</a></span>
+            </div>
+            <div class="stats">
+                <p>C/C++</p>
+                <div class="stats-bar1">
+                    <div class="stats-bar-filler"></div>
+                </div>
+                <p>Python</p>
+                <div class="stats-bar1">
+                    <div class="stats-bar-filler"></div>
+                </div>
+                <p>Database</p>
+                <div class="stats-bar1">
+                    <div class="stats-bar-filler"></div>
+                </div>
+                <br>
+                <p>Leadership</p>
+                <div class="stats-bar1">
+                    <div class="stats-bar-filler"></div>
+                </div>
+                <p>Communication</p>
+                <div class="stats-bar1">
+                    <div class="stats-bar-filler"></div>
+                </div>
+                <p>Teamwork</p>
+                <div class="stats-bar1">
+                    <div class="stats-bar-filler"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+  $(document).ready(function(){
+    $(".scroller").click(function(e){
+      e.preventDefault();
+      $("html, body").animate({ scrollTop: 0 }, "slow"); 
+    });
+  });
+</script>
+
+</body>
+</html>

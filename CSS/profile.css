@@ -1,0 +1,154 @@
+main {
+    position: relative;
+    top: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100vh;
+    float: left;
+    background-color: var(--color-of-background);
+    align-items: center;
+}
+
+div.nav-ref-1 a {
+  color: var(--color-of-highlight) !important;
+}
+
+.greetings-section{
+    flex-basis: 455px;
+    text-align: center;
+    margin-top: 165px;
+}
+
+.profile-section{
+    margin-top: 35px;
+    width: 100%;
+    padding: 40px 0;
+    background-color: #FAFAD2;
+    display:flex;
+    align-items: center;
+    column-gap: 50px;
+    justify-content: center;
+}
+
+.greetings-section {
+  font-family: fantasy;
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1.3;
+  color: var(--color-of-text1); 
+}
+
+.greetings-section-welcome {
+  margin: 0;
+  color: var(--color-of-text1-alt); 
+}
+
+.greetings-section-im {
+  color: var(--color-of-text1);
+}
+
+.greetings-section-lastname {
+  color: var(--color-of-text1); 
+}
+
+.greetings-section-backname {
+  color: var(--color-of-text1); 
+}
+
+.greetings-section-frontname {
+  background-color: var(--color-of-highlight); 
+  color: var(--color-of-background-alt); 
+  border-radius: 6px;
+  padding: 2px 6px;
+  margin-left: 5px;
+}
+
+img.my-gambar{
+  width: 250px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 50px;
+}
+
+.profile-description{
+    flex-basis: 455px;
+}
+
+.profile-description h2{
+    font-family: fantasy;
+    font-size: 30px;
+    line-height: 24px;
+    font-weight: bolder;
+    color: var(--color-of-text1);
+    margin-bottom: 20px;
+}
+
+.profile-description p{
+    font-family: fantasy;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 100px;
+    color: var(--color-of-text1);
+    text-align: justify;
+}
+
+.profile-description a{
+    color: var(--color-of-background-alt);
+    font-weight: bold;
+    text-decoration: none;
+    font-family: fantasy;
+    z-index: 1000;
+    position: relative;
+    text-decoration: none;
+}
+
+.profile-description span{
+    margin-top: 10px;
+    background-color: var(--color-of-highlight);
+    width: fit-content;
+    height: auto;
+    padding: 6px 10px;
+    display: inline-block;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.profile-description a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    transition: width 0.3s ease-in-out;
+}
+
+.profile-description a:hover::after {
+    width: 100%;
+}
+
+.stats{
+    flex-basis: 350;
+}
+
+.stats p{
+    margin-bottom: 2px;
+    font-size: 12px;
+    line-height: 18px;
+}
+.stats-bar1 {
+    width: 300px;
+    height: 15px;
+    border: 3px solid var(--color-of-highlight);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.stats-bar-filler {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-of-background-alt);
+    border-radius: 5px;
+}

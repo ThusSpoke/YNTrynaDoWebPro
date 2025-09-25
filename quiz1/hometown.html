@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamal's Dashboard</title>
+    <link rel="stylesheet" href="../CSS/reseter.css">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/hometown.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-main">
+                <div class="div-nav">
+                <nav class="header-nav">
+                    <ul>
+                        <li>
+                        <div class="home"><a href="../TrueHome.html">Home</a></div>
+                        <div class="nav-ref-1"><a href="../quiz1/profile.html">Profile</a></div>
+                        <div class="nav-ref-2"><a class="scroller">Hometown</a></div>
+                        <div class="nav-ref-3"><a href="../quiz1/food.html">Food</a></div>
+                        <div class="nav-ref-4"><a href="../quiz1/touris.html">Touris</a></div>
+                        </li>
+                    </ul>
+                </nav>
+                </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="greetings-section">
+            <h2 class="greetings-section-welcome"><a href="https://maps.app.goo.gl/B9TT7rzGdSdbmEX4A" target="_blank">TUBAN</a>,<br></h2>
+            <span class="greetings-section-im">Place</span>
+            <span class="greetings-section-frontname">I</span>
+            <span class="greetings-section-backname">Call</span>
+            <span class="greetings-section-lastname">Home</span>
+        </section>
+
+        <section class="profile-section">
+                <div class="profile-photo">
+                <span class="gallery-prev">&#10094;</span>
+                <img src="../IMGS/172037809-769877173530425-1643260470189728104-n-86f71716715df5178498e9c2cbe93e56-1d5931ce5b56d0ce65b569a27b391a08.jpg" 
+                    alt="my-gambar" 
+                    class="my-gambar" 
+                    id="currentImage">
+                <span class="gallery-next">&#10095;</span>
+                </div>
+            <div class="profile-description">
+                <h2 class="profile-description-aboutme">Place where it all started...</h2>
+                <p class="profile-description-description">I grew up in Tuban for 18 years before coming to ITS, so it will always feel like home. The city mixes industry and tradition, with oil refineries alongside historical sites like the Great Mosque of Tuban. I have fond memories of local festivals and Reog performances that make the culture feel alive. Beaches like Boom Beach and the mangrove forests were my favorite places to relax. Even now at ITS, I still feel connected to Tuban’s streets, markets, and everyday life.</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+  $(document).ready(function(){
+    $(".scroller").click(function(e){
+      e.preventDefault();
+      $("html, body").animate({ scrollTop: 0 }, "slow"); 
+    });
+  });
+
+  $(document).ready(function(){
+  let images = [
+    "../IMGS/172037809-769877173530425-1643260470189728104-n-86f71716715df5178498e9c2cbe93e56-1d5931ce5b56d0ce65b569a27b391a08.jpg",
+    "../IMGS/images.jpeg",
+    "../IMGS/lpzc7vnbh5l8xk6.jpeg"
+  ];
+  
+  let currentIndex = 0;
+
+  function showImage(index){
+    $("#currentImage").attr("src", images[index]);
+  }
+
+  $(".gallery-next").click(function(){
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+  });
+
+  $(".gallery-prev").click(function(){
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  });
+});
+
+
+</script>
+
+</body>
+</html>

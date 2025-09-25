@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamal's Dashboard</title>
+    <link rel="stylesheet" href="CSS/reseter.css">
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/quiz1.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-main">
+                <div class="div-nav">
+                <nav class="header-nav">
+                    <ul>
+                        <li>
+                        <div class="home"><a class="scroller">Home</a></div>
+                        <div class="nav-ref-1"><a href="quiz1/profile.html">Profile</a></div>
+                        <div class="nav-ref-2"><a href="quiz1/hometown.html">Hometown</a></div>
+                        <div class="nav-ref-3"><a href="quiz1/food.html">Food</a></div>
+                        <div class="nav-ref-4"><a href="quiz1/touris.html">Touris</a></div>
+                        </li>
+                    </ul>
+                </nav>
+                </div>
+        </div>
+    </header>
+    <section>
+    </section>
+
+    <main>
+        <div class="containerofwords">
+        <h2 class="text-penyambut">Hello beyonder!</h2>
+        <h2>Please take a seat on this commoneer website...</h2>
+        </div>
+        <div class="containerofwords2">
+        <p class="text-penyambut2">You can find out more about me by clicking the navigation bar above!</p>
+        </div>
+    </main>
+
+    <script>
+  $(document).ready(function(){
+    $(".scroller").click(function(e){
+      e.preventDefault();
+      $("html, body").animate({ scrollTop: 0 }, "slow"); 
+    });
+  });
+</script>
+
+</body>
+</html>
